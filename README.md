@@ -23,9 +23,9 @@ Therefore, we first run create_tables.py then etl.py to create the database, cre
 
 
 # Examples
-'''
+```
 %load_ext sql
 %sql postgresql://student:student@127.0.0.1/sparkifydb
 %%sql
 SELECT COUNT(*) from songplays;
-'''
+```
