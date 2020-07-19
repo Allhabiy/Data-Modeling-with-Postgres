@@ -2,7 +2,8 @@
 Project 1: Data Modeling with Postgres for Udacity 
 
 
-# The goal of this project is to build a PostgreSQL database utilizing the data on users activity and songs metadata. Building the database helps us do complex analytics regarding users activity as well as song play analysis.
+# The goal 
+of this project is to build a PostgreSQL database utilizing the data on users activity and songs metadata. Building the database helps us do complex analytics regarding users activity as well as song play analysis.
 
 # Data
 The songs' metadata sourse is a subset of the Million Song Dataset (https://labrosa.ee.columbia.edu/millionsong/). Also, the users' activities is a simulated data using eventsim. The data resides in two main directories:
@@ -21,8 +22,10 @@ Therefore, we first run create_tables.py then etl.py to create the database, cre
 
 
 
-Examples
+# Examples
+'''
 %load_ext sql
 %sql postgresql://student:student@127.0.0.1/sparkifydb
 %%sql
 SELECT COUNT(*) from songplays;
+'''
