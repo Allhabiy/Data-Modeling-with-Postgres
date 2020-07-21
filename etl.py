@@ -6,6 +6,33 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
+    """Processing of all song records
+    
+    Purpose of this funciton is to loop in all the files from data/song_data folder
+    using which the following tables are populated -
+    song
+    artist
+    
+    Parameters
+    ----------
+    cur : object
+        Connection object passed on from the main function to perform the 
+        data insertion into the tables
+    filepath : string
+        Filepath where all the song files are stored
+    Returns
+    ----------
+    No return value
+    
+    Raises
+    ----------
+    DatabaseError
+        If there are any database errors while inserting the data
+    OSError
+        If the filepaths are invalid
+    
+    """
+    
     # open song file
     df = pd.read_json(filepath, lines=True)
     # insert song record
@@ -18,6 +45,33 @@ def process_song_file(cur, filepath):
 
 
 def process_log_file(cur, filepath):
+     """Processing of all log file records
+    
+    Purpose of this funciton is to loop in all the files from data/log_data folder
+    using which the following tables are populated -
+    time
+    user
+    songplay
+    
+    Parameters
+    ----------
+    cur : object
+        Connection object passed on from the main function to perform the 
+        data insertion into the tables
+    filepath : string
+        Filepath where all the song files are stored
+    Returns
+    ----------
+    No return value
+    
+    Raises
+    ----------
+    DatabaseError
+        If there are any database errors while inserting the data
+    OSError
+        If the filepaths are invalid
+    
+    """    
     # open log file
     df = pd.read_json(filepath, lines=True)
 
